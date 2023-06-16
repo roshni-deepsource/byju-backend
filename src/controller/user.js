@@ -171,7 +171,7 @@ class UserController {
             let exists = false
             userModel.findOne({email: email_r})
                 .then((result) => {
-                    if (result == null) {
+                    if (result === null) {
                         resolve(exists)
                     } else {
                         exists = true;
